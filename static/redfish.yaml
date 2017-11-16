@@ -5213,11 +5213,6 @@ definitions:
   ManagerAccount.1.0.0_ManagerAccount.post:
     allOf:
       - $ref:  "#/definitions/ManagerAccount.1.0.0_ManagerAccount"
-      - type: object
-        required:
-        - Password
-        - RoleId
-        - UserName
         properties:
           Password:
             description: This property is used with a PATCH or PUT to write the password
@@ -5229,6 +5224,11 @@ definitions:
           UserName:
             description: This property contains the user name for the account.
             type: string
+      - type: object
+        required:
+        - Password
+        - RoleId
+        - UserName
 
   ManagerAccountCollection_ManagerAccountCollection:
     properties:
